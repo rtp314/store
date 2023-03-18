@@ -67,16 +67,15 @@ export default function ItemContextProvider({ children }: React.PropsWithChildre
   const [items, setItems] = useState<Item[]>([]);
   const store = { loading: isLoading, items: items };
 
-  const fetchURL = 'https://store-rtp314.herokuapp.com/items';
   // const fetchURL = window.location.href + "/items";
-  // const fetchURL = "http://localhost:8000/items"; //for offline testing
 
   useEffect(() => {
     // setTimeout(() => {
     //     setItems(testItems);
     //     setIsLoading(false);
     // }, 500);
-    fetch(fetchURL)
+    // @ts-ignore TODO: setup client.d.ts to remove warning on next line
+    fetch(import.meta.env.VITE_API_ENDPOINT)
       .then(res => res.json())
       .then(fetchedItems => setItems(fetchedItems))
       .catch(err => console.log(err))
