@@ -1,0 +1,38 @@
+:root {
+    --toast-width: min(25rem, 50%);
+}
+
+.toast {
+    position: fixed;
+    top: 3rem;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.toast-inner {
+    width: var(--toast-width);
+    height: 100%;
+    background: purple;
+    color: white;
+    margin: 0.3em auto;
+    padding: 1em;
+    display: grid;
+    place-content: center;
+    border-radius: 0.5em;
+    box-shadow: 0.2em 0.2em 0.2em #333;
+    transition: transform 500ms ease;
+    z-index: 20;
+}
+
+.toast-inner:hover {
+    opacity: 0.7;
+}
+
+.toast-inner-show {
+    transform: translateY(0px);
+}
+
+.toast-inner-hide {
+    transform: translateY(-150%);
+}

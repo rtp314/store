@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+    --primary: rgb(70, 100, 22);
+    --secondary: rgb(107, 129, 72);
+    --background: #fffafa;
+    --contrast: #361c67;
+    --faint: rgb(232, 236, 225);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    font-family: "Poppins";
+    position: relative;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: var(--primary);
+    color: var(--background);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    z-index: 10;
+}
+
+nav > div {
+    height: 100%;
+    width: 100%;
+    margin: 0 4rem;
+    font-size: 1.2rem;
+}
+
+main {
+    max-width: 50rem;
+    margin: 4rem auto 0 auto;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: 4rem;
+    width: 100%;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    padding: 0.5em 0.7em;
+    border-radius: 0.5em;
+    font-size: 1rem;
+    background-color: var(--secondary);
+    color: white;
+    transition: background-color 100ms;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+}
+
+.btn:disabled:hover {
+    background-color: var(--secondary);
+}

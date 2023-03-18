@@ -1,0 +1,88 @@
+@import "shared-styles.css";
+
+#basket-icon {
+    width: 2rem;
+    fill: white;
+}
+
+#basket-details {
+    background: var(--contrast);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 0.6em;
+    position: absolute;
+    top: 2em;
+    right: 4em;
+}
+
+.basket-grid {
+    display: grid;
+    grid-template-columns: 4em auto 1fr 1fr 1fr;
+    gap: 0.5em;
+    align-items: center;
+    justify-items: center;
+}
+
+.grid-title {
+    font-weight: bold;
+}
+
+#basket {
+    gap: 0.5em;
+    position: relative;
+}
+
+.basket-image {
+    height: 100%;
+    aspect-ratio: 4/3;
+}
+
+#basket-quantity {
+    position: absolute;
+    right: -0.5em;
+    bottom: -0.2em;
+    background: var(--contrast);
+    border-radius: 50%;
+    height: 1.2em;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-content: center;
+}
+
+#catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.item {
+    width: 15em;
+    background-color: var(--faint);
+    padding: 0.6em;
+    border-radius: 1em;
+    transition: box-shadow 100ms;
+}
+
+.item:hover {
+    box-shadow: 0.1em 0.2em 0.2em #ddd;
+}
+
+.item-image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    display: grid;
+    place-content: center;
+    object-fit: cover;
+}
+
+.item-description {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 0.3em 0 0.3em;
+}
+
+.item-name {
+    font-weight: bold;
+}
