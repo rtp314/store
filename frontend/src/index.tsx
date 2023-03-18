@@ -5,7 +5,7 @@ import App from "./App";
 import ItemContextProvider from "./lib/ItemContext";
 import BasketContextProvider from "./lib/BasketContext";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
     <React.StrictMode>
         <ItemContextProvider>
