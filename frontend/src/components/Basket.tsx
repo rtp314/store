@@ -5,9 +5,7 @@ import { useBasket } from '../lib/BasketContext';
 import { ReactComponent as BasketIcon } from '../icons/cart-svgrepo-com.svg';
 
 export default function Basket() {
-  const fetchURL = 'https://store-rtp314.herokuapp.com/create-stripe-session';
-  // const fetchURL = window.location.href + "/create-stripe-session";
-  // const fetchURL = "http://localhost:8000/create-stripe-session"; //for offline testing
+  const fetchURL = '/create-stripe-session';
   const { basketItems, dispatch } = useBasket();
   const [openBasket, setOpenBasket] = useState(false);
   const basketDetailsRef = useRef<HTMLDivElement>(null);

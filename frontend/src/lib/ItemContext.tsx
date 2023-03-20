@@ -75,7 +75,7 @@ export default function ItemContextProvider({ children }: React.PropsWithChildre
     //     setIsLoading(false);
     // }, 500);
     // @ts-ignore TODO: setup client.d.ts to remove warning on next line
-    fetch(import.meta.env.VITE_API_ENDPOINT)
+    fetch('/items')
       .then(res => res.json())
       .then(fetchedItems => setItems(fetchedItems))
       .catch(err => console.log(err))
